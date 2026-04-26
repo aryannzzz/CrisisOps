@@ -126,7 +126,12 @@ The curriculum starts at level 1 (one honest member, one liar, one crisis) and u
 | Training episodes | 300–400 | ~4–6h on Kaggle T4; enough for L1 → L2 curriculum unlock |
 | Optimizer | AdamW, lr=2e-5 | Standard for LoRA fine-tuning |
 
-One honest note: 1.5B is small for this task. The expected final reward is in the +0.05 to +0.15 range, not near the oracle's +0.34. But the behavioural signature — higher cross-verification rate, faster liar identification, and more proactive stakeholder communication — is visible even when the absolute number is modest. We think that story is more interesting than raw scores: you can see *what* the model learned to do differently, not just *how much* the number went up.
+One honest note: 1.5B is small for this task. The expected final reward is in the +0.05 to +0.15 range, not near the oracle's +0.34. But the behavioural signature, higher cross-verification rate, faster liar identification and more proactive stakeholder communication is visible even when the absolute number is modest. We think that story is more interesting than raw scores: you can see *what* the model learned to do differently, not just *how much* the number went up.
+
+<img width="1273" height="685" alt="Training Plots" src="https://github.com/user-attachments/assets/bfb022c7-39ed-4d1d-a123-21d4ab09d921" />
+
+One key observation that Samyam Bhutani Sir told us is that GRPO takes time to train, hence the steady net increase of average reward is more important than mild fluctuations in the reward over individual steps.
+
 
 ### Debugging GRPO: when the loss looks broken but isn't
 
